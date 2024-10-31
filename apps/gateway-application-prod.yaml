@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod
+  namespace: argocd
+spec:
+  source:
+    path: apps/gateway-service
+    repoURL: https://github.com/AgusCarrizo94/gitops-demo
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values.prod.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: governify
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
