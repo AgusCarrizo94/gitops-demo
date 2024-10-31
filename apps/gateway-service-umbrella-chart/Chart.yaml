@@ -1,9 +1,9 @@
 apiVersion: v2
 name: gateway-service-chart
-description: A Helm chart for Kubernetes
+description: An Umbrella Helm Chart
 type: application
 version: 0.1.0
 dependencies:
   - name: governify-chart
     version: 0.1.0
-    repository: file://../governify-chart
+    repository: file://../../governify-chart

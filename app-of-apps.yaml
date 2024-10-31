@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: default
   source:
-    path: apps
+    path: apps/gateway-service-app
     repoURL: 'https://github.com/AgusCarrizo94/gitops-demo'
     targetRevision: HEAD
   project: default

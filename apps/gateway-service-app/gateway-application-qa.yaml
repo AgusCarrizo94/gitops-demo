@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    path: apps/gateway-service
+    path: apps/gateway-service-umbrella-chart
     repoURL: https://github.com/AgusCarrizo94/gitops-demo
     targetRevision: HEAD
     helm:
